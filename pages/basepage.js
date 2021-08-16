@@ -1,10 +1,15 @@
 let webdriver = require("selenium-webdriver");
+let assert = require("assert");
 let driver = new webdriver.Builder().forBrowser("chrome").build();
 driver.manage().setTimeouts({implicit:(10000)});
 
 class BasePage{
     constructor(){
         global.driver = driver;
+    }
+
+    assert_equal(actual,expectation){
+        assert.equal(actual,expectation);
     }
 
     open_url(url){
@@ -207,7 +212,6 @@ class BasePage{
         driver.findElement(locator_by).sendKeys(Key.ENTER);
     }
 
-    
 }
 
 module.exports = BasePage;

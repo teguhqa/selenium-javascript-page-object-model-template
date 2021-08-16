@@ -3,6 +3,7 @@ let BasePage = require("./basepage");
 let webdriver = require("selenium-webdriver");
 
 
+
 class HomePage extends BasePage{
 
     fill_username(username){
@@ -14,6 +15,7 @@ class HomePage extends BasePage{
     click_login_button(){
         driver.findElement(By.id("btnLogin")).click();
     }
+
 }
 
 module.exports = new HomePage();
