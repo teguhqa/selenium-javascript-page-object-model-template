@@ -157,6 +157,56 @@ class BasePage{
         driver.manage().window().fullscreen();
     }
 
+    find_above_element_by_id(id,tag_name){
+        const elemen = driver.findElement(By.id(id));
+        driver.findElement(withTagName(tag_name).above(elemen));
+    }
+
+    find_below_element_by_id(id,tag_name){
+        const elemen = driver.findElement(By.id(id));
+        driver.findElement(withTagName(tag_name).below(elemen));
+    }
+
+    find_left_element_by_id(id,tag_name){
+        const elemen = driver.findElement(By.id(id));
+        driver.findElement(withTagName(tag_name).toLeftOf(elemen));
+    }
+
+    find_right_element_by_id(id,tag_name){
+        const elemen = driver.findElement(By.id(id));
+        driver.findElement(withTagName(tag_name).toRightOf(elemen));
+    }
+
+    find_near_element_by_id(id,tag_name){
+        const elemen = driver.findElement(By.id(id));
+        driver.findElement(withTagName(tag_name).near(elemen));
+    }
+
+    is_element_enabled(locator_by){
+        driver.findElement(locator_by).isEnabled();
+    }
+
+    is_element_selected(locator_by){
+        driver.findElement(locator_by).isSelected();
+    }
+
+    get_element_CSS_property(locator_by,CSS_value){
+        driver.findElement(locator_by).getCssValue(CSS_value);
+    }
+
+    get_element_text(locator_by){
+        driver.findElement(locator_by).getText();
+    }
+
+    clear_text(locator_by){
+        let input = driver.findElement(locator_by);
+        input.clear();
+    }
+
+    press_enter(locator_by){
+        driver.findElement(locator_by).sendKeys(Key.ENTER);
+    }
+
     
 }
 

@@ -1,3 +1,4 @@
+const { Driver } = require("selenium-webdriver/chrome");
 const loginpage = require("../pages/loginpage");
 
 
@@ -20,6 +21,7 @@ describe("This is describe block",function(){
         loginpage.fill_password("admin123");
         loginpage.click_login_button();
         loginpage.close_driver();
+        
 
     });
 })
