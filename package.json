@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --timeout 60000"
+    "test": "mocha --timeout 60000 --inline-diffs -j=1 -c true"
   },
   "keywords": [],
   "author": "",
