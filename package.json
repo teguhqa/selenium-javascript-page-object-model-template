@@ -1,0 +1,17 @@
+{
+  "name": "SeleniumJSPOM",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --timeout 60000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^92.0.1",
+    "mocha": "^9.0.3",
+    "selenium-webdriver": "^3.6.0"
+  }
+}
